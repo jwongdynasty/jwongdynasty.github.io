@@ -15,12 +15,22 @@
 <body>
 <div class="container">
   <nav>
-    <div class="logo"></div>
+    <div class="logo-wrapper">
+      <div class="logo"></div>
+    </div>
     <ul>
-      <li>Reserve</li>
-      <li>Menu</li>
-      <li>About</li>
-      <li>Contact</li>
+      <li{% if page.title == 'Reserve' %} class="selected"{% endif %}>
+        <a href="/index.html">Reserve</a>
+      </li>
+      <li{% if page.title == 'Menu' %} class="selected"{% endif %}>
+        <a href="/menu.html">Menu</a>
+      </li>
+      <li{% if page.title == 'About' %} class="selected"{% endif %}>
+        <a href="/about.html">About</a>
+      </li>
+      <li{% if page.title == 'Contact' %} class="selected"{% endif %}>
+        <a href="/contact.html">Contact</a>
+      </li>
     </ul>
   </nav>
   <main>

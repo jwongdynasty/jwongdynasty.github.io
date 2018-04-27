@@ -1,0 +1,14 @@
+// buttons
+
+.btn {
+  height: $unit * 5;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: $color-ink;
+  font-weight: $weight-black;
+  color: $color-white;
+  border: none;
+  border-radius: $unit * 0.5;
+  cursor: pointer;
+}

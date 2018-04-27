@@ -1,9 +1,46 @@
+/* FONTS
+================================================== */
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 400;
+  src: url("../assets/fonts/Inter-UI-Hinted/Inter-UI-Regular.woff2") format("woff2"),
+       url("../assets/fonts/Inter-UI-Hinted/Inter-UI-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 500;
+  src: url("../assets/fonts/Inter-UI-Hinted/Inter-UI-Medium.woff2") format("woff2"),
+       url("../assets/fonts/Inter-UI-Hinted/Inter-UI-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 900;
+  src: url("../assets/fonts/Inter-UI-Hinted/Inter-UI-Black.woff2") format("woff2"),
+       url("../assets/fonts/Inter-UI-Hinted/Inter-UI-Black.woff") format("woff");
+}
+
+// VARIABLES
+
+$unit: 8px;
+$weight-normal: 400;
+$weight-bold: 500;
+$weight-black: 900;
+$color-white: #fff;
+$color-ink: #000;
+$color-stone: #696969;
+$color-cloud: #E6E8EB;
+
 /* BASIC
 ================================================== */
 	body {
 		background: #fff;
-		font: 14px/1.6 "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		color: #333;
+		font: 14px/1.6 "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: $color-ink;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
  }
@@ -13,15 +50,16 @@
 ================================================== */
 h1, h2, h3, h4, h5, h6 {
 	color: #111;
-	font-weight: 300;
+	font-weight: $weight-black;
+  margin-bottom: $unit * 3;
 }
 
-h1 			{ font-size: 60px; line-height: 1.5; }
-h2 			{ font-size: 48px; line-height: 1.5; }
-h3 			{ font-size: 36px; line-height: 1.5; }
-h4 			{ font-size: 24px; line-height: 1.5; }
-h5 			{ font-size: 21px; line-height: 1.5; }
-h6 			{ font-size: 18px; line-height: 1.5; }
+h1 			{ font-size: 24px; line-height: 1.5; }
+h2 			{ font-size: 16px; line-height: 1.5; }
+h3 			{ font-size: 14px; line-height: 1.5; }
+h4 			{ font-size: 14px; line-height: 1.5; }
+h5 			{ font-size: 14px; line-height: 1.5; }
+h6 			{ font-size: 16px; line-height: 1.5; }
 
 p 			{ margin: 0 0 20px 0; }
 em 			{ font-style: italic; }

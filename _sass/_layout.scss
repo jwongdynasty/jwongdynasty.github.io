@@ -1,0 +1,89 @@
+// LAYOUT
+
+// -- General
+
+.container {
+  background-color: #e9e9e9;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+nav {
+  position: fixed;
+  height: 100%;
+  width: 50%;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-gap: $unit;
+  justify-content: center;
+  align-content: center;
+}
+
+
+main {
+  background-color: #f8f8f8;
+  display: grid;
+  grid-column: 2/3;
+  grid-template-columns: 20% 60% 20%;
+  grid-gap: $unit;
+  justify-content: center;
+  // padding-top: $unit * 10;
+  align-content: center;
+
+}
+
+// -- Nav
+
+nav {
+
+  .logo-wrapper {
+    grid-column: 2/3;
+    display: grid;
+    justify-content: center;
+    margin-bottom: $unit * 3;
+
+  }
+
+  .logo {
+    width: 216px;
+    height: 46px;
+    background-image: url("../assets/images/glyph.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  ul {
+    grid-column: 2/3;
+  }
+
+  li {
+    text-align: center;
+    line-height: $unit * 5;
+    height: $unit * 5;
+    text-transform: uppercase;
+    // font-weight: $weight-black;
+
+    &.selected {
+      font-weight: $weight-black;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+}
+
+
+// -- Main
+
+main {
+
+  .content-main {
+    grid-column: 2/3;
+  }
+
+}
