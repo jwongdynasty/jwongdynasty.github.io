@@ -14,27 +14,29 @@
 </head>
 <body>
 <div class="container">
-  <nav>
+  <nav {% if page.title == 'Reserve' %} class="page-reserve"{% endif %} {% if page.title == 'Menu' %} class="page-menu"{% endif %} {% if page.title == 'About' %} class="page-about"{% endif %} {% if page.title == 'Contact' %} class="page-contact"{% endif %} >
     <div class="logo-wrapper">
       <div class="logo"></div>
     </div>
     <ul>
       <li{% if page.title == 'Reserve' %} class="selected"{% endif %}>
-        <a href="/index.html">Reserve</a>
+        <a href="index.html">Reserve</a>
       </li>
       <li{% if page.title == 'Menu' %} class="selected"{% endif %}>
-        <a href="/menu.html">Menu</a>
+        <a href="menu.html">Menu</a>
       </li>
       <li{% if page.title == 'About' %} class="selected"{% endif %}>
-        <a href="/about.html">About</a>
+        <a href="about.html">About</a>
       </li>
       <li{% if page.title == 'Contact' %} class="selected"{% endif %}>
-        <a href="/contact.html">Contact</a>
+        <a href="contact.html">Contact</a>
       </li>
     </ul>
   </nav>
   <main>
-   {{content}}
+    <div class="content-main">
+      {{content}}
+    </div>
   </main>
 </div>
 </body>

@@ -14,7 +14,7 @@ nav {
   position: fixed;
   height: 100%;
   width: 50%;
-  background-color: #fff;
+  background-color: $color-ink;
   display: grid;
   grid-template-columns: 20% 60% 20%;
   grid-gap: $unit;
@@ -30,7 +30,8 @@ main {
   grid-template-columns: 20% 60% 20%;
   grid-gap: $unit;
   justify-content: center;
-  // padding-top: $unit * 10;
+  padding-top: $unit * 10;
+  padding-bottom: $unit * 10;
   align-content: center;
 
 }
@@ -48,7 +49,7 @@ nav {
   }
 
   .logo {
-    width: 216px;
+    width: 240px;
     height: 46px;
     background-image: url("../assets/images/glyph.svg");
     background-repeat: no-repeat;
@@ -59,22 +60,61 @@ nav {
     grid-column: 2/3;
   }
 
+
   li {
     text-align: center;
     line-height: $unit * 5;
     height: $unit * 5;
     text-transform: uppercase;
-    // font-weight: $weight-black;
+    font-weight: $weight-bold;
+    text-shadow: 0px 1px rgba(0,0,0,0.7);
+
 
     &.selected {
       font-weight: $weight-black;
+
+      &::before {
+        content:"\00a0\00a0";
+        width: 10px;
+        height: 10px;
+        color: #fff;
+      }
+
+      &::after {
+        content:".";
+        width: 10px;
+        height: 10px;
+        color: #fff;
+      }
     }
 
-    a {
+    a, a:active, a:focus, a:hover {
+      color: $color-white;
       text-decoration: none;
     }
   }
 
+  &.page-reserve{
+    background-image: url("../assets/images/figure_a.jpg");
+  }
+  &.page-menu{
+    background-image: url("../assets/images/figure_b.jpg");
+  }
+  &.page-about{
+    background-image: url("../assets/images/figure_c.jpg");
+  }
+  &.page-contact{
+    background-image: url("../assets/images/figure_d.jpg");
+  }
+
+  &::after {
+    content: "";
+    background-color: rgba(0,0,0,0.4);
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
 }
 
 
@@ -84,6 +124,20 @@ main {
 
   .content-main {
     grid-column: 2/3;
+  }
+
+  .dish {
+    margin-bottom: $unit * 4;
+
+    h3 {
+      // text-transform: uppercase;
+      margin-bottom: 0px;
+    }
+
+    small {
+      font-size: 12px;
+      color: $color-stone;
+    }
   }
 
 }
