@@ -40,7 +40,7 @@ nav {
   @include bp(mobile) {
    width: 100%;
    position: absolute;
-   height: 240px;
+   height: 300px;
    grid-template-columns: 5% 90% 5%;
  }
 }
@@ -58,11 +58,13 @@ main {
   align-content: center;
 
   @include bp(mobile) {
-   margin-top: 240px;
+   margin-top: 300px;
    grid-column: 1/4;
    padding-top: $unit * 5;
    padding-bottom: $unit * 10;
    align-content: start;
+   grid-template-columns: 10% 80% 10%;
+
  }
 }
 
@@ -102,7 +104,7 @@ nav {
     height: $unit * 5;
     text-transform: uppercase;
     font-weight: $weight-bold;
-    text-shadow: 0px 1px rgba(0,0,0,0.7);
+    text-shadow: 0px 1px rgba(0,0,0,0.3);
 
     &.selected {
       font-weight: $weight-black;
