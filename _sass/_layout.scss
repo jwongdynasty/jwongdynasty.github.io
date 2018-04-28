@@ -30,18 +30,16 @@ nav {
   width: 50%;
   background-color: $color-ink;
   display: grid;
-  grid-template-columns: 20% 60% 20%;
+  grid-template-columns: 5% 90% 5%;
   grid-gap: $unit;
   justify-content: center;
   align-content: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+
 
   @include bp(mobile) {
    width: 100%;
    position: absolute;
    height: 300px;
-   grid-template-columns: 5% 90% 5%;
  }
 }
 
@@ -90,47 +88,44 @@ nav {
   }
 
   ul {
+    text-align: center;
     grid-column: 2/3;
     z-index: 1;
-    @include bp(mobile) {
-      text-align: center;
+
+    a {
+      text-decoration: none;
     }
   }
 
 
   li {
+    font-size: 12px;
+    display: inline-block;
     text-align: center;
     line-height: $unit * 5;
-    height: $unit * 5;
+    height: $unit * 4;
+    margin: 0 $unit * 2 0 $unit * 2;
+    border-bottom: 2px solid rgba(255,255,255,0);
     text-transform: uppercase;
-    font-weight: $weight-bold;
-    text-shadow: 0px 1px rgba(0,0,0,0.3);
+    font-weight: $weight-black;
+    text-shadow: 0px 1px rgba(0,0,0,0.1);
+    opacity: 0.9;
+    color: $color-white;
 
-    &.selected {
-      font-weight: $weight-black;
-      &::before {
-        content:"\00a0";
-        width: 10px;
-        height: 10px;
-        color: #fff;
-      }
-      &::after {
-        content:".";
-        width: 10px;
-        height: 10px;
-        color: #fff;
-      }
+    &:hover {
+      opacity: 1;
     }
 
-    a, a:active, a:focus, a:hover {
-      color: $color-white;
-      text-decoration: none;
+    &.selected {
+      border-bottom: 2px solid rgba(255,255,255,1);
+      opacity: 1;
     }
 
     @include bp(mobile) {
-     display: inline;
-     padding: 0 $unit 0 $unit;
-   }
+      margin: 0 $unit 0 $unit;
+    }
+
+
   }
 
   &.page-reserve:before{
@@ -140,6 +135,9 @@ nav {
     display: block;
     width: 100%;
     height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
   }
   &.page-menu:before{
@@ -149,6 +147,9 @@ nav {
     display: block;
     width: 100%;
     height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
   }
   &.page-about:before{
@@ -158,6 +159,9 @@ nav {
     display: block;
     width: 100%;
     height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
   }
   &.page-contact:before{
@@ -167,6 +171,9 @@ nav {
     display: block;
     width: 100%;
     height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
   }
 
@@ -179,6 +186,11 @@ nav {
     bottom: 40px;
     text-align: center;
     z-index: 1;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
 
     @include bp(mobile) {
      top: 10px;
