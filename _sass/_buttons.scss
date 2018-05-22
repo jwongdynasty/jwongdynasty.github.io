@@ -1,6 +1,11 @@
 // buttons
 
 .btn {
+
+  transition: 0.2s ease-in-out;
+  display: block;
+  text-align: center;
+  line-height: $unit * 5;
   height: $unit * 5;
   width: 100%;
   box-sizing: border-box;
@@ -11,4 +16,15 @@
   border: none;
   border-radius: $unit * 0.5;
   cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #333;
+  }
+}
+
+a.btn {
+  &:hover, &:visited, &:active {
+   color: $color-white;
+  }
 }
