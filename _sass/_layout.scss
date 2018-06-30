@@ -156,6 +156,7 @@ nav {
 
   .nav-img {
     opacity: 0.8;
+    pointer-events: none;
   }
 
   &.page-reserve > .nav-img{
