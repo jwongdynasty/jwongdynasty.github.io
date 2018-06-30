@@ -128,71 +128,8 @@ nav {
     @include bp(mobile) {
       margin: 0 $unit 0 $unit;
     }
-
-
   }
 
-  &.page-reserve:before{
-    background-image: url("../assets/images/dinnerware.jpg");
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-  }
-  &.page-menu:before{
-    background-image: url("../assets/images/figure_b.jpg");
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-  }
-  &.page-about:before{
-    background-image: url("../assets/images/jimmy.jpg");
-    // background-image: url("../assets/images/figure_c.jpg");
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-  }
-  &.page-contact:before{
-    background-image: url("../assets/images/figure_d.jpg");
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  &.page-thank-you:before{
-    background-image: url("../assets/images/figure_e.jpg");
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-  }
 
   .social-media {
     position: absolute;
@@ -216,18 +153,85 @@ nav {
    }
   }
 
-  &::after {
+
+  .nav-img {
+    opacity: 0.8;
+  }
+
+  &.page-reserve > .nav-img{
+    background-image: url("../assets/images/dinnerware.jpg");
     content: "";
-    background-color: rgba(0,0,0,0.8);
-    position:absolute;
+    position: absolute;
+    display: block;
     width: 100%;
     height: 100%;
-    opacity: 0.5;
-    // background-image: url("../assets/images/dench_pattern.png");
-    // background-repeat: no-repeat;
-    // background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
   }
+  &.page-menu > .nav-img{
+    background-image: url("../assets/images/figure_b.jpg");
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+  &.page-about > .nav-img{
+    background-image: url("../assets/images/jimmy.jpg");
+    // background-image: url("../assets/images/figure_c.jpg");
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+  &.page-contact > .nav-img{
+    background-image: url("../assets/images/figure_d.jpg");
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.page-thank-you > .nav-img{
+    background-image: url("../assets/images/figure_e.jpg");
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+
+  // &::after {
+  //   content: "";
+  //   background-color: rgba(0,0,0,0.8);
+  //   position:absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   opacity: 0.5;
+  //   // background-image: url("../assets/images/dench_pattern.png");
+  //   // background-repeat: no-repeat;
+  //   // background-position: bottom;
+  //
+  // }
 
 }
 
